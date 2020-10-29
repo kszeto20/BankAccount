@@ -4,5 +4,7 @@ public class BankTester{
 
     System.out.println(acc1.getBalance());
     System.out.println(acc1.getAccountID());
+    acc1.setPassword("heyhey");
+    System.out.println(acc1.getPassword());
   }
 }
