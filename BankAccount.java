@@ -27,7 +27,7 @@ public class BankAccount{
   }
 
   public boolean deposit(double amount){
-    if (amount > 0){
+    if (amount >= 0){
       balance = balance + amount;
       return true;
     }
@@ -35,11 +35,15 @@ public class BankAccount{
   }
 
   public boolean withdraw(double amount){
-    if (amount <= balance && amount
-     > 0){
+    if (amount <= balance && amount >= 0){
       balance = balance - amount;
       return true;
     }
     return false;
+
+  }
+
+  public String toString(){
+    return accountID + "\t" + balance;
   }
 }
